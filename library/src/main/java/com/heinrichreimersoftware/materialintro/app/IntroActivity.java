@@ -507,7 +507,7 @@ public class IntroActivity extends AppCompatActivity implements IntroNavigation 
         if (position >= getCount()) {
             return false;
         }
-        if (position <= 0) {
+        if (position < 0) {
             return true;
         }
 
@@ -1150,7 +1150,7 @@ public class IntroActivity extends AppCompatActivity implements IntroNavigation 
 
     @SuppressWarnings("unused")
     public void setPagerIndicatorVisible(boolean visible) {
-        binding.miPagerIndicator.setVisibility(visible ? View.VISIBLE : View.GONE);
+        binding.miPagerIndicator.setVisibility(visible ? View.VISIBLE : View.INVISIBLE);
     }
 
     @Deprecated
